@@ -22,7 +22,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h1><img>AppsMu</h1>
+                    <h1 style="display: flex; align-items: center; gap: 10px;"> <img src="asset/img/icon_Apps_Mu.svg" alt="Logo" style="width: 40px; height: 40px;"> AppsMu</h1>
                     <p style="color: #808080;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae nesciunt consectetur laudantium dolores incidunt architecto!</p>
                     <p><strong>(+62) 877-327-748-99</strong></p>
                     <p>or</p>
