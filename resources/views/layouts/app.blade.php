@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{config('app.name', 'laravel')}}</title>
+    <title>{{config('app.name','laravel')}}</title>
+    <link rel="stylesheet" href="{{ asset ('asset/css/nav.css')}}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,7 +30,60 @@
 </head>
 
 <body>
+    {{-- Navbar start  --}}
+    <nav>
+        <div class="logo">
+            <img src="asset\img\logo-appMu.svg" alt="logo" >
+            <p style="display: flex";>AppsMU </p> 
+        </div>
+        {{-- menu dalam teks --}}
+        <ul class="text-menu">
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="shop">Shop</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+        {{-- search box --}}
+        <div class="container-search">   
+            <form>
+                <div class="icon-wrapper">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Search..." class="search-box">
+                </div>
+                <button class="search-button">Search</button>
+            </form>
+        </div>
 
+        {{-- toogle untuk search ketika hilang --}}
+        <div class="search-icon">
+            
+        </div>
+
+        {{-- menu dalam icon --}}
+        <ul class="icon-menu">
+            {{-- Search ketika hilang --}}
+            <li><a href="#"><i class="uil uil-search"></i></a></li>
+            <li><a href="#"><i class="uil uil-users-alt"></i></a></li>
+            <li><a href="#"><i class="uil uil-shopping-bag"></i></a></li>
+
+            
+        </ul>
+
+        {{-- toogle untuk menu icon --}}
+        <div class="hamburger-menu">
+            <i class="uil uil-bars"></i>
+        </div>
+
+        
+       
+        
+    </nav>
+    {{-- Navbar end --}}
+
+    @yield("content")
+
+
+    <hr class="mt-5 " />
     <!-- Footer Start -->
     <footer id="footer" class="footer">
 

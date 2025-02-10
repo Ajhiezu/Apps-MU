@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+/* navbar */
+/*ini flex antara ul dengan div logo*/
+nav{
+    display: flex; 
+    background-color: #795C32;
+    padding: 10px 5px;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 20px;
+    padding-left: 2rem;
+    margin-right: 5rem;
+}
+
+/* antar elemen menu */
+nav ul.text-menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul.icon-menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 3.5rem;
+}
+
+
+
+nav ul.text-menu li a{
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size:large;
+}
+nav ul.icon-menu li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-size:large;
+}
+
+/* search become icon */
+nav ul.icon-menu li:nth-child(1){
+    display: none;
+    list-style: none;
+    color: white;
+}
+
+/* search-box */
+.container-search form {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+
+}
+form {
+    display: flex;
+    align-items: center;
+    
+}
+
+/* search icon */
+.icon-wrapper{
+    padding-left:1rem;
+    background-color: white;
+    margin-left: 2rem;
+    display: flex;
+}   
+form .uil.uil-search{
+    align-self: center;
+    justify-self: start;
+    color: black;
+    margin-right: 5px;
+}
+
+
+/* form search */
+.search-box{
+    height: 30px;
+    width: 20rem;
+    border: none;
+    outline: none;
+    flex: 1 1 auto;
+  
+}
+/* button search */
+.search-button{
+    background-color: #B29200;
+    height: 30px;
+    width: 70px;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: small;
+    letter-spacing: 1px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-right: 2rem;
+}
+/* Hamburger menu */
+
+.hamburger-menu{
+    font-size: 24px;
+    display: none;
+}
+
+
+
+.search-icon li a{
+    color: white;
+}
+
+/* break point  */
+@media (max-width: 1160px){
+    .search-box{
+        width: 15rem;
+    }
+    .search-button{
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 1070px){
+    
+    nav ul.icon-menu li{
+        display:none
+    }
+
+    nav ul.icon-menu li:nth-child(1){
+        display: flex;
+    }
+    .hamburger-menu{
+        display: flex;
+        align-items: center;
+        padding-right: 3rem;
+    }
+    .container-search{
+        display: none;
+    }
+    
+
+}
