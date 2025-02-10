@@ -26,7 +26,7 @@ nav{
     align-items: center;
     font-weight: 800;
     font-size: 20px;
-    padding-left: 3rem;
+    padding-left: 2rem;
     margin-right: 5rem;
 }
 
@@ -43,8 +43,9 @@ nav ul.icon-menu{
     list-style: none;
     align-items: center;
     gap: 2rem;
-    margin-right: 5rem;
+    margin-right: 3.5rem;
 }
+
 
 
 nav ul.text-menu li a{
@@ -58,6 +59,13 @@ nav ul.icon-menu li a{
     font-family: sans-serif;
     color: white;
     font-size:large;
+}
+
+/* search become icon */
+nav ul.icon-menu li:nth-child(1){
+    display: none;
+    list-style: none;
+    color: white;
 }
 
 /* search-box */
@@ -74,10 +82,19 @@ form {
 }
 
 /* search icon */
-form .a{
+.icon-wrapper{
+    padding-left:1rem;
+    background-color: white;
+    margin-left: 2rem;
+    display: flex;
+}   
+form .uil.uil-search{
     align-self: center;
-    padding: 10px 20px;
-} 
+    justify-self: start;
+    color: black;
+    margin-right: 5px;
+}
+
 
 /* form search */
 .search-box{
@@ -85,6 +102,7 @@ form .a{
     width: 20rem;
     border: none;
     outline: none;
+    flex: 1 1 auto;
   
 }
 /* button search */
@@ -101,15 +119,47 @@ form .a{
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     margin-right: 2rem;
-
-    
 }
-@media (max-width: 1110px){
+/* Hamburger menu */
+
+.hamburger-menu{
+    font-size: 24px;
+    display: none;
+}
+
+
+
+.search-icon li a{
+    color: white;
+}
+
+/* break point  */
+@media (max-width: 1160px){
     .search-box{
         width: 15rem;
-        margin-left: 2rem;
     }
     .search-button{
         margin-right: 2rem;
     }
+}
+
+@media (max-width: 1070px){
+    
+    nav ul.icon-menu li{
+        display:none
+    }
+
+    nav ul.icon-menu li:nth-child(1){
+        display: flex;
+    }
+    .hamburger-menu{
+        display: flex;
+        align-items: center;
+        padding-right: 3rem;
+    }
+    .container-search{
+        display: none;
+    }
+    
+
 }

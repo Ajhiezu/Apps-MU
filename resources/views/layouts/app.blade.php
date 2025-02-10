@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+    {{-- Navbar start  --}}
     <nav>
         <div class="logo">
             <img src="asset\img\logo-appMu.svg" alt="logo" >
@@ -28,24 +28,46 @@
             <li><a href="contact">Contact</a></li>
         </ul>
         {{-- search box --}}
-        <div class="container-search">
-            
+        <div class="container-search">   
             <form>
-                <a href=""><i class="uil uil-search"></i></a>
-                <input type="text" placeholder="Search..." class="search-box">
+                <div class="icon-wrapper">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Search..." class="search-box">
+                </div>
                 <button class="search-button">Search</button>
             </form>
         </div>
+
+        {{-- toogle untuk search ketika hilang --}}
+        <div class="search-icon">
+            
+        </div>
+
         {{-- menu dalam icon --}}
         <ul class="icon-menu">
+            {{-- Search ketika hilang --}}
+            <li><a href="#"><i class="uil uil-search"></i></a></li>
             <li><a href="#"><i class="uil uil-users-alt"></i></a></li>
             <li><a href="#"><i class="uil uil-shopping-bag"></i></a></li>
+
+            
         </ul>
 
+        {{-- toogle untuk menu icon --}}
+        <div class="hamburger-menu">
+            <i class="uil uil-bars"></i>
+        </div>
+
+        
+       
         
     </nav>
+    {{-- Navbar end --}}
+
+    @yield("content")
 
 
+    <hr class="mt-5 " />
     <!-- Footer Start -->
     <footer class="footer">
         <div class="container">

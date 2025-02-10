@@ -25,6 +25,7 @@ body {
     background-color: #222;
     color: #ddd;
     padding: 50px 20px;
+    margin-bottom: 0;
 }
 
 .container {
