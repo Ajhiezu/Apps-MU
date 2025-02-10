@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset ('asset/css/Footer.css')}}">
 
 
+
     <!-- Unicon Section Start -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!-- Unicon Section End -->
@@ -73,7 +74,12 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h1 style="display: flex; align-items: center; gap: 10px;"> <img src="asset/img/icon_Apps_Mu.svg" alt="Logo" style="width: 40px; height: 40px;"> AppsMu</h1>
+                    <h1 style="display: flex; align-items: center; gap: 10px;">
+                        <a href="{{route('admin.homepage')}}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                            <img src="asset/img/icon_Apps_Mu.svg" alt="Logo" style="width: 40px; height: 40px;"> 
+                            AppsMu
+                        </a>
+                    </h1>
                     <p style="color: #808080;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae nesciunt consectetur laudantium dolores incidunt architecto!</p>
                     <p><strong>(+62) 877-327-748-99</strong></p>
                     <p>or</p>
@@ -109,10 +115,11 @@
                 <div class="footer-section">
                     <h4>Categories</h4>
                     <ul>
-                        <li><a href="#">Fruit & Vegetables</a></li>
-                        <li><a href="#">Meat & Fish</a></li>
-                        <li><a href="#">Bread & Bakery</a></li>
-                        <li><a href="#">Beauty & Health</a></li>
+                        <li><a href="#">Alat Musik Petik</a></li>
+                        <li><a href="#">Alat Musik Tiup</a></li>
+                        <li><a href="#">Alat Musik Pukul/Perkusi</a></li>
+                        <li><a href="#">Alat Musik Gesek</a></li>
+                        <li><a href="#">Alat Musik Keyboard</a></li>
                     </ul>
                 </div>
             </div>

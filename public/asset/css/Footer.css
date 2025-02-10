@@ -19,13 +19,25 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .footer {
     background-color: #222;
     color: #ddd;
     padding: 50px 20px;
+
     margin-bottom: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-section a{
+    color: white;
+    text-decoration: none;
+
 }
 
 .container {
