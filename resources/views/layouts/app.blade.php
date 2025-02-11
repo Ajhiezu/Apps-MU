@@ -63,7 +63,7 @@
         <ul class="icon-menu">
             {{-- Search ketika hilang --}}
             <li><a href="#"><i class="uil uil-search"></i></a></li>
-            <li><a href="#"><i class="uil uil-users-alt"></i></a></li>
+            <li><a href="{{route('admin.homepage')}}"><i class="uil uil-users-alt"></i></a></li>
             <li><a href="#"><i class="uil uil-shopping-bag"></i></a></li>
 
             
