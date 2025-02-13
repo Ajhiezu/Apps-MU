@@ -11,15 +11,18 @@ body{
 
 /* navbar */
 /*ini flex antara ul dengan div logo*/
-nav{
+nav .nav-bar{
     display: flex; 
     background-color: #795C32;
     padding: 10px 5px;
     color: white;
     width: 100%;
     margin: 0 auto;
+    position: fixed;
+    align-items: center;
     justify-content: space-between;
 }
+
 
 .logo{
     display: flex;
@@ -38,38 +41,104 @@ nav ul.text-menu{
     gap: 3rem;
 }
 
-nav ul.icon-menu{
+.container-kecil ul.icon-menu{
     display: flex;
     list-style: none;
     align-items: center;
     gap: 2rem;
-    margin-right: 3.5rem;
+    margin-right: 1rem;
 }
 
 
 
-nav ul.text-menu li a{
+nav ul li a{
     text-decoration: none;
     font-family: 'Poppins',sans-serif;
     color: white;
     font-size:large;
-}
-nav ul.icon-menu li a{
-    text-decoration: none;
-    font-family: sans-serif;
-    color: white;
-    font-size:large;
+    transition: color 0.3s ease;
 }
 
-/* search become icon */
-nav ul.icon-menu li:nth-child(1){
-    display: none;
-    list-style: none;
-    color: white;
+nav ul li a::before{
+    content: "";
 }
+
+nav ul li:hover a{
+    color: #B29200;
+}
+
+
+/* Menu ketika break point */
+
+.nav-bar .container-kecil{
+    display: flex;
+    padding-right: 3rem;
+    color: white;
+   
+}
+
+
+.nav-bar .container-kecil .search-dropDown{
+    font-size: 20px;
+    align-items: center;
+    gap: 2rem;
+    display: none;
+}
+.container-kecil .hamburger-menu {
+    display: flex;
+    align-items: center;
+    font-size: 22px ;
+}
+.container-kecil .hamburger-menu a {
+    color: white; /* kalau memang mau putih */
+    display: none;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.container-kecil .hamburger-menu a::before{
+    content: "";
+}
+
+.container-kecil .hamburger-menu:hover a {
+    color: #B29200;
+}
+
+ .search-dropDown{
+    color: white;
+    align-items: center;
+    justify-items: center ;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+} 
+
+ .search-dropDown::before{
+    content: "";
+}
+
+ .search-dropDown:hover{
+    color: #B29200;
+}
+
+ 
+/* search become icon */
+.search-icon,
+.cancel-icon{
+    position: absolute;
+} 
+
+.cancel-icon{
+    opacity: 0;
+    pointer-events: none;
+} 
+
+
+
+
 
 /* search-box */
-.container-search form {
+nav .nav-bar .container-search form {
     display: flex;
     font-family: 'Poppins', sans-serif;
     align-items: center;
@@ -119,19 +188,17 @@ form .uil.uil-search{
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     margin-right: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
-/* Hamburger menu */
 
-.hamburger-menu{
-    font-size: 24px;
-    display: none;
-}
 
 
 
 .search-icon li a{
     color: white;
 }
+
 
 /* break point  */
 @media (max-width: 1160px){
@@ -144,22 +211,63 @@ form .uil.uil-search{
 }
 
 @media (max-width: 1070px){
-    
-    nav ul.icon-menu li{
-        display:none
+    .nav-bar .container-kecil{
+        display: flex;
+        margin-left: 7rem;
     }
 
-    nav ul.icon-menu li:nth-child(1){
-        display: flex;
-    }
-    .hamburger-menu{
+    .nav-bar .container-kecil .search-dropDown{
         display: flex;
         align-items: center;
+        gap: 3rem;
         padding-right: 3rem;
     }
+
     .container-search{
         display: none;
     }
-    
 
+    nav ul.text-menu{
+        margin-right: 4rem;
+        margin-left: -3rem
+    }
+   
 }
+
+@media (max-width: 860px){
+    .nav-bar .container-kecil{
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 780px){
+    .container-kecil .hamburger-menu a{
+        display: flex;
+        margin-left: 1rem;
+    }
+    
+    /* menyembunyikan navbar ke sebelah kiri */
+    nav ul.text-menu{
+       position: absolute;
+       top: 100%;
+       left: -100%;
+       background-color: white;  
+       width: 30rem;
+       height: 100vh;
+       transition: 0.3s;
+       display: block;
+       opacity: 80%;
+    }
+
+    /* menambahkan kelas active ketika hamburger menu dipencet, untuk behaviour navbar */
+    nav ul.text-menu.active{
+        left: 0;
+    }
+
+    nav ul.text-menu a{
+        display: block;
+        margin: 1.5rem;
+        color: black;
+        padding-left:2.5rem;
+    }
+} 

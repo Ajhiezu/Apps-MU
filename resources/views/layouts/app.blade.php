@@ -17,51 +17,58 @@
 <body>
     {{-- Navbar start  --}}
     <nav>
-        <div class="logo">
-            <img src="asset\img\logo-appMu.svg" alt="logo" >
-            <p style="display: flex";>AppsMU </p> 
-        </div>
-        {{-- menu dalam teks --}}
-        <ul class="text-menu">
-            <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="shop">Shop</a></li>
-            <li><a href="contact">Contact</a></li>
-        </ul>
-        {{-- search box --}}
-        <div class="container-search">   
-            <form>
-                <div class="icon-wrapper">
-                    <i class="uil uil-search"></i>
-                    <input type="text" placeholder="Search..." class="search-box">
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="asset\img\logo-appMu.svg" alt="logo" >
+                <p style="display: flex";>AppsMU </p> 
+            </div>
+            {{-- menu dalam teks --}}
+            <ul id="menu-list" class="text-menu">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="shop">Shop</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+
+            {{-- search box --}}
+            <div class="container-search">   
+                    <form>
+                        <div class="icon-wrapper">
+                            <i class="uil uil-search"></i>
+                            <input type="text" placeholder="Search..." class="search-box">
+                        </div>
+                        <button class="search-button">Search</button>
+                    </form>
+            </div>
+    
+            
+            {{-- menu ketika break point --}}
+            <div class="container-kecil">
+                {{-- Search ketika hilang --}}
+                <div class="search-dropDown">
+                    <div class="search-icon">
+                        <i class="uil uil-search"></i>
+                    </div>    
+                    <div class="cancel-icon">
+                        <i class="uil uil-times"></i>
+                    </div>
                 </div>
-                <button class="search-button">Search</button>
-            </form>
+
+                 {{-- menu dalam icon --}}
+                <ul class="icon-menu">    
+                    <li><a href="#"><i class="uil uil-users-alt"></i></a></li>
+                    <li><a href="#"><i class="uil uil-shopping-bag"></i></a></li>
+                </ul>
+
+                <div class="hamburger-menu">
+                    <a href="#" id="hamburger"><i class="uil uil-bars"></i></a>
+                </div>
+            </div>
+           
+           
+            {{-- toogle untuk menu icon --}}
+           
         </div>
-
-        {{-- toogle untuk search ketika hilang --}}
-        <div class="search-icon">
-            
-        </div>
-
-        {{-- menu dalam icon --}}
-        <ul class="icon-menu">
-            {{-- Search ketika hilang --}}
-            <li><a href="#"><i class="uil uil-search"></i></a></li>
-            <li><a href="#"><i class="uil uil-users-alt"></i></a></li>
-            <li><a href="#"><i class="uil uil-shopping-bag"></i></a></li>
-
-            
-        </ul>
-
-        {{-- toogle untuk menu icon --}}
-        <div class="hamburger-menu">
-            <i class="uil uil-bars"></i>
-        </div>
-
-        
-       
-        
     </nav>
     {{-- Navbar end --}}
 
@@ -137,7 +144,7 @@
     </footer>
 
     <!-- Footer End -->
-
+    <script src="{{ asset('asset/js/header.js') }}"></script>
 </body>
 
 </html>
